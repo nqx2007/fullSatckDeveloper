@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"></div>
+    <script src="vdom.js"></script>
+    <script>
+        let element=createElement("div",{class:"show-area","data-name":"my-com"},[
+            createElement("p",{},[
+                createElement("span",{key:'name1',"id":"spanElement1"},"heiheihei"),
+                createElement("span",{key:'name2',"id":"spanElement2"},"heiheihei点点滴滴"),
+                createElement("span",{key:'name3',"id":"spanElement3"},"heiheihei点点滴滴纯纯粹粹"),
+            ]),
+            createElement("span",{"id":"spanElement"},"heiheihei"),
+            createElement("a",{onClick:function(){console.log(11)}},"lalalal")
+        ])
+        let element2=createElement("div",{class:"show-area","data-name":"my-com"},[
+            createElement("p",{},[
+                createElement("span",{key:'name2',"id":"spanElement2"},"heiheihei点点滴滴"),
+                createElement("span",{key:'name1',"id":"spanElement1"},"heiheihei"),
+                createElement("span",{key:'name3',"id":"spanElement3"},"heiheihei点点滴滴纯纯粹粹"),
+            ]),
+            createElement("span",{"id":"spanElement"},"heiheihei"),
+            createElement("a",{onClick:function(){console.log(11)}},"lalalal")
+        ])
+        render(element,document.getElementById("app"))
+    </script>
+</body>
+</html>
